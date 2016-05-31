@@ -1,0 +1,12 @@
+--- ./deps/v8/src/base/atomicops_internals_arm_gcc.h    2016-05-31 09:40:56.664331382 +0100
++++ ./deps/v8/src/base/dfs.h    2016-05-31 09:41:09.295963118 +0100
+@@ -59,7 +59,8 @@
+ // variant of the target architecture is being used. This tests against
+ // any known ARMv6 or ARMv7 variant, where it is possible to directly
+ // use ldrex/strex instructions to implement fast atomic operations.
+-#if defined(__ARM_ARCH_7__) || defined(__ARM_ARCH_7A__) || \
++#if defined(__ARM_ARCH_8__) || defined(__ARM_ARCH_8A__) || \
++    defined(__ARM_ARCH_7__) || defined(__ARM_ARCH_7A__) || \
+     defined(__ARM_ARCH_7R__) || defined(__ARM_ARCH_7M__) || \
+     defined(__ARM_ARCH_6__) || defined(__ARM_ARCH_6J__) || \
+     defined(__ARM_ARCH_6K__) || defined(__ARM_ARCH_6Z__) || \
