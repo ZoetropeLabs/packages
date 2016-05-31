@@ -1,0 +1,27 @@
+From 5379f9afb7b8b7006150b0287c0cde67106ada1a Mon Sep 17 00:00:00 2001
+From: Michael Boulton <michaelboulton@gmail.com>
+Date: Tue, 31 May 2016 10:27:49 +0100
+Subject: [PATCH] Add c++0x
+
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e6a9d20..c42be83 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3,8 +3,8 @@ project (mraa)
+ 
+ FIND_PACKAGE (Threads REQUIRED)
+ 
+-set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -fno-omit-frame-pointer")
+-set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
++set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -fno-omit-frame-pointer -pipe -std=c++0x")
++set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -pipe -std=c++0x")
+ set (LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
+ 
+ # Set CMAKE_LIB_INSTALL_DIR if not defined
+-- 
+2.7.4
+
